@@ -7,14 +7,22 @@ import { You } from './classes/you.js';
 import { Game } from './classes/game.js';
 
 
-let player1 = new You();
-console.log(player1);
-
 
 // variables for DOM
-let you = $('you');
-let liftbutton = $('liftButton');
+let you = $('.you');
+let liftbutton = $('.liftButton');
 
+
+
+let player1 = new You();
+
+//Create button so that players strength add's 1 each click (done)
+
+liftbutton.on('click', function (event){
+  event.preventDefault();
+  player1.buildStrength();
+  console.log(player1);
+});
 
 // Goals of Game
 /* Do You Even???
