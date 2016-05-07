@@ -11,7 +11,9 @@ let player1 = new You();
 console.log(player1);
 
 
-
+// variables for DOM
+let you = $('you');
+let liftbutton = $('liftButton');
 
 
 // Goals of Game

@@ -6,8 +6,8 @@ export class You {
     this.ifYouEven = false;
   }
 
-  buildStrength (you, strength) {
-    you.strength.val(you.strengthlevel);
+  buildStrength (player, strength) {
+    player.strength.val(you.strengthlevel);
   }
 
 }
