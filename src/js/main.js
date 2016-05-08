@@ -12,6 +12,7 @@ import { Game } from './classes/game.js';
 // variables for DOM
 let you = $('.you');
 let liftbutton = $('.liftButton');
+let timerbutton = $('.timerButton');
 let img = $('img');
 let countdown = $('.countdown');
 
@@ -31,8 +32,13 @@ liftbutton.on('click', function (event){
   } else {
     img.attr('src', './images/setup.jpg');
   }
+});
 
-  // Create a countdown to display on html when button is clicked
+// Create a countdown to display on html when button is clicked
+timerbutton.on('click', function (event) {
+  event.preventDefault()
+  console.log('clicked');
+
   let seconds = 16;
   let subtractSeconds = setInterval(countSecondsDown, 1000);
 
@@ -45,20 +51,12 @@ liftbutton.on('click', function (event){
     }
 
     if (seconds === 0) {
-      alert("TIMES UP");
+      alert("TIME IS UP");
     }
 
   countdown.html(seconds);
   }
 });
-
-  // setTimeout( function () {
-  // game.checkIfHeEven(player1);
-  // console.log(game.checkIfHeEven);
-  // }, 15000);
-
-
-
 
 
 
