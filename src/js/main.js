@@ -5,7 +5,7 @@ import $ from 'jquery';
 // Classes
 import { You } from './classes/you.js';
 import { Game } from './classes/game.js';
-import { Timer } from './classes/timer.js';
+
 
 
 
@@ -13,11 +13,12 @@ import { Timer } from './classes/timer.js';
 let you = $('.you');
 let liftbutton = $('.liftButton');
 let img = $('img');
+let countdown = $('.countdown');
 
 // variables for instances
 let player1 = new You();
 let game = new Game();
-let timer = new Timer();
+
 
 //Create button so that players strength add's 1 each click (donfe)
 
@@ -31,16 +32,36 @@ liftbutton.on('click', function (event){
     img.attr('src', './images/setup.jpg');
   }
 
-// Create a timer to see if you even
-setTimeout( function () {
-game.checkIfHeEven(player1);
-console.log(game.checkIfHeEven);
-}, 15000);
+  // Create a countdown to display on html when button is clicked
+  let seconds = 16;
+  let subtractSeconds = setInterval(countSecondsDown, 1000);
 
-timer.countdownSeconds();
-console.log(timer);
-console.log(timer);
+  function countSecondsDown() {
+    seconds = seconds - 1;
+
+    if (seconds <= -1) {
+      clearInterval(subtractSeconds);
+      return;
+    }
+
+    if (seconds === 0) {
+      alert("TIMES UP");
+    }
+
+  countdown.html(seconds);
+  }
 });
+
+  // setTimeout( function () {
+  // game.checkIfHeEven(player1);
+  // console.log(game.checkIfHeEven);
+  // }, 15000);
+
+
+
+
+
+
 
 // Goals of Game
 /* Do You Even???

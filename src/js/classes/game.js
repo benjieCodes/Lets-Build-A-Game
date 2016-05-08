@@ -9,8 +9,10 @@ export class Game {
     if (you.strengthLevel < 2) {
     this.doYouEven = "nope";
     alert(this.doYouEven);
-  } else {
+    } else {
     this.doYouEven = 'wow'
+    }
   }
-  }
+
+
 }
