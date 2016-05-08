@@ -13,10 +13,11 @@ let you = $('.you');
 let liftbutton = $('.liftButton');
 let img = $('img');
 
-
+// variables for instances
 let player1 = new You();
+let game = new Game();
 
-//Create button so that players strength add's 1 each click (done)
+//Create button so that players strength add's 1 each click (donfe)
 
 liftbutton.on('click', function (event){
   event.preventDefault();
@@ -27,6 +28,13 @@ liftbutton.on('click', function (event){
   } else {
     img.attr('src', './images/setup.jpg');
   }
+
+// Create a timer to see if you even
+setTimeout( function () {
+game.checkIfHeEven(player1);
+console.log(game.checkIfHeEven);
+}, 15000);
+
 });
 
 // Goals of Game
