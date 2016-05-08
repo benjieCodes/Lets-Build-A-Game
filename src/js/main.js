@@ -11,7 +11,7 @@ import { Game } from './classes/game.js';
 // variables for DOM
 let you = $('.you');
 let liftbutton = $('.liftButton');
-
+let img = $('img');
 
 
 let player1 = new You();
@@ -22,6 +22,11 @@ liftbutton.on('click', function (event){
   event.preventDefault();
   player1.buildStrength();
   console.log(player1);
+  if (img.attr('src') === './images/setup.jpg') {
+    img.attr('src', './images/setup2.jpg');
+  } else {
+    img.attr('src', './images/setup.jpg');
+  }
 });
 
 // Goals of Game
