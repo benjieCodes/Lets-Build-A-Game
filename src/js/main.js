@@ -5,6 +5,7 @@ import $ from 'jquery';
 // Classes
 import { You } from './classes/you.js';
 import { Game } from './classes/game.js';
+import { Timer } from './classes/timer.js';
 
 
 
@@ -16,6 +17,7 @@ let img = $('img');
 // variables for instances
 let player1 = new You();
 let game = new Game();
+let timer = new Timer();
 
 //Create button so that players strength add's 1 each click (donfe)
 
@@ -35,6 +37,9 @@ game.checkIfHeEven(player1);
 console.log(game.checkIfHeEven);
 }, 15000);
 
+timer.countdownSeconds();
+console.log(timer);
+console.log(timer);
 });
 
 // Goals of Game
