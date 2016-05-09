@@ -10,16 +10,16 @@ export class Game {
     this.doYouEven = "wow you're horrible";
     alert(this.doYouEven);
     } else if (you.strengthLevel >= 10 && you.strengthLevel <= 20) {
-    this.doYouEven = "ok";
+    this.doYouEven = "ehh";
     alert(this.doYouEven);
     } else if (you.strengthLevel > 21 && you.strengthLevel <= 30) {
-    this.doYouEven = "ok1";
+    this.doYouEven = "bush league";
     alert(this.doYouEven);
     } else if(you.strengthLevel > 31 && you.strengthLevel <= 40) {
-    this.doYouEven = "ok2";
+    this.doYouEven = "beginner's luck";
     alert(this.doYouEven);
     } else if(you.strengthLevel > 40) {
-    this.doYouEven = "WOO";
+    this.doYouEven = "Woah. You definitely even, bro.";
     alert(this.doYouEven);
     }
   }

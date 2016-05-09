@@ -1,21 +1,28 @@
 @import 'bulma';
 
-body {
-  background: black;
-}
 .gameMenu {
+  margin-top: 15%;
   background: black;
-  overflow: hidden;
   width: 100%;
-  height: 100%;
+  text-align: center;
 }
 
-.container {
+.secret {
   background: url(../images/background.png);
+  background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .hidden {
   display: none;
+}
+
+.container {
+  margin-top: 22%;
+}
+
+.countdown {
+  font-size: 100px;
+  color: red;
 }

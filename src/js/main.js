@@ -9,7 +9,7 @@ import { Game } from './classes/game.js';
 
 
 
-// variables for DOM
+// variables for DOM 
 let you = $('.you');
 let liftbutton = $('.liftButton');
 let timerbutton = $('.timerButton');
@@ -19,6 +19,9 @@ let progressStrength = $('progress.value').html();
 let menubutton = $('.startGame');
 let gamecontainer = $('.container');
 let gamemenu = $('.gameMenu');
+let parent = $('html');
+
+
 // variables for instances
 let player1 = new You();
 let game = new Game();
@@ -28,6 +31,7 @@ menubutton.on('click', function (event){
   console.log('cli');
   gamecontainer.removeClass('hidden');
   gamemenu.addClass('hidden');
+  parent.addClass('secret');
 });
 
 
