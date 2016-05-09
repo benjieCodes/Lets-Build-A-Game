@@ -39,7 +39,7 @@ timerbutton.on('click', function (event) {
   event.preventDefault()
   console.log('clicked');
 
-  let seconds = 16;
+  let seconds = 11;
   let subtractSeconds = setInterval(countSecondsDown, 1000);
 
   function countSecondsDown() {
@@ -56,7 +56,13 @@ timerbutton.on('click', function (event) {
 
   countdown.html(seconds);
   }
+
+  setTimeout( function () {
+  game.checkIfHeEven(player1);
+  console.log(game.checkIfHeEven);
+}, 12000);
 });
+
 
 
 
