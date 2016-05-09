@@ -18,7 +18,10 @@ export class Game {
     } else if(you.strengthLevel > 31 && you.strengthLevel <= 40) {
     this.doYouEven = "ok2";
     alert(this.doYouEven);
+    } else if(you.strengthLevel > 40) {
+    this.doYouEven = "WOO";
+    alert(this.doYouEven);
+    }
   }
 
-  }
 }

@@ -8,19 +8,27 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div class="container">
-      <div class="you">
-        <h1>YOU</h1>
-        <div class="countdown"></div>
-        <img src="./images/setup.jpg" alt="setup lift" />
+    <div class="gameMenu">
+      <h1>DO YOU EVEN?</h1>
+      <p>
+        This game's sole purpose is to determine whether or not you... Even. DO YOU HAVE WHAT IT TAKES???
+      </p>
+      <p>
+        FIND OUT BY CLICKING THIS BUTTON <button type="button" class="startGame">START EVEN'ING</button>
+      </p>
       </div>
-      <div class="lift">
-        <button type="button" class="liftButton">Even'ing!!!</button>
-        <button type="button" class="timerButton">START</button>
+      <div class="container hidden">
+        <div class="you">
+          <h1>YOU</h1>
+          <div class="countdown"></div>
+          <img src="./images/setup.jpg" alt="setup lift" />
+        </div>
+        <div class="lift">
+          <progress class="progress is-danger" value="" max="40"></progress>
+          <button type="button" class="liftButton">LIFT</button>
+          <button type="button" class="timerButton">START TIMER</button>
+        </div>
       </div>
-
-    </div>
-
 
     <script src="js/bundle.js"></script>
   </body>

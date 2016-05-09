@@ -15,10 +15,20 @@ let liftbutton = $('.liftButton');
 let timerbutton = $('.timerButton');
 let img = $('img');
 let countdown = $('.countdown');
-
+let progressStrength = $('progress.value').html();
+let menubutton = $('.startGame');
+let gamecontainer = $('.container');
+let gamemenu = $('.gameMenu');
 // variables for instances
 let player1 = new You();
 let game = new Game();
+
+menubutton.on('click', function (event){
+  event.preventDefault();
+  console.log('cli');
+  gamecontainer.removeClass('hidden');
+  gamemenu.addClass('hidden');
+});
 
 
 //Create button so that players strength add's 1 each click (donfe)
@@ -32,6 +42,7 @@ liftbutton.on('click', function (event){
   } else {
     img.attr('src', './images/setup.jpg');
   }
+
 });
 
 // Create a countdown to display on html when button is clicked
