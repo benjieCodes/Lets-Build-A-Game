@@ -13,14 +13,19 @@ const assert = chai.assert;
 
 describe('Testing the Creation of Something', function () {
 
+
     it('should be in an instance of a player when created', function () {
-      let player = new You;
+      let player = new You();
       expect(player).to.be.an.instanceof(You);
     });
 
     it('should be an instance of a game when created', function () {
-      let game = new Game;
+      let game = new Game();
       expect(game).to.be.an.instanceof(Game);
     });
 
+    it('should be 0 strengthLevel when the game starts', function () {
+      let player = new You();
+      expect(player.strengthLevel).to.be.equal(0);
+    });
 });
