@@ -15,7 +15,7 @@ let liftbutton = $('.liftButton');
 let timerbutton = $('.timerButton');
 let img = $('img');
 let countdown = $('.countdown');
-let progressStrength = $('progress.value').html();
+let progressStrength = $('progress');
 let menubutton = $('.startGame');
 let gamecontainer = $('.container');
 let gamemenu = $('.gameMenu');
@@ -28,7 +28,6 @@ let game = new Game();
 
 menubutton.on('click', function (event){
   event.preventDefault();
-  console.log('cli');
   gamecontainer.removeClass('hidden');
   gamemenu.addClass('hidden');
   parent.addClass('secret');
@@ -46,6 +45,7 @@ liftbutton.on('click', function (event){
   } else {
     img.attr('src', './images/setup.jpg');
   }
+  // progressStrength.attr('value') = progressStrength++
 
 });
 

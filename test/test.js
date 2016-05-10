@@ -13,9 +13,14 @@ describe('Something We Want To Test', function () {
 
   describe('Testing the Creation of Something', function () {
 
-    it('should exist after we create it', function () {
-      let x = new Object;
-      expect(x).to.be.an.instanceof(Object);
+    let game;
+    beforeEach( function (){
+      game = new You();
+    });
+
+    it('should be in an instance of a player', function () {
+      let x = new You();
+      expect(game).to.be.an.instanceof(You);
     });
 
   });
