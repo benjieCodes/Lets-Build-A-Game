@@ -1,9 +1,11 @@
 .gameMenu {
-  margin-top: 15%;
-  background: black;
+  margin-top: 10%;
+  margin-left: 20px;
+  margin-right: 20px;
   width: 100%;
   text-align: center;
-  color: lightgrey;
+  padding: 30px;
+  border: 1px solid black;
 }
 
 .secret {
@@ -28,7 +30,6 @@
 
 .countdown {
   background: white;
-  float: right;
   font-size: 100px;
   color: red;
 }
